@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  geoserver:
+    image: terrestris/geoserver:2.22.2
+    ports:
+      - 8080:8080
+    volumes:
+      - ./geoserver/geoserver_data:/opt/geoserver_data/:Z
+  database:
+    image: postgis/postgis:13-3.2-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgis/postgresql_data:/var/lib/postgresql/data:Z

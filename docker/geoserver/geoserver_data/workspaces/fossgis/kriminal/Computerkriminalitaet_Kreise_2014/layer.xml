@@ -1,0 +1,17 @@
+<layer>
+  <name>Computerkriminalitaet_Kreise_2014</name>
+  <id>LayerInfoImpl-4cd2c4d3:186df3517be:-7ffa</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e9d0036:186c1ac670f:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-4cd2c4d3:186df3517be:-7ffb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-14 08:26:44.811 UTC</dateCreated>
+  <dateModified>2023-03-14 08:30:36.846 UTC</dateModified>
+</layer>

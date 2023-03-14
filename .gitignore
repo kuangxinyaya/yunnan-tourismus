@@ -1,0 +1,4 @@
+docker/postgis/postgresql_data
+docker/geoserver/geoserver_data/logs/*.log
+docker/geoserver/geoserver_data/**/tmp*.*
+docker/geoserver/geoserver_data/gwc/**
