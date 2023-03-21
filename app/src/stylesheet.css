@@ -1,6 +1,6 @@
-.side {
+  .side {
     float: left;
-    height: 22%; 
+    height: 25%; 
     width: 350px; 
     position: fixed; 
     z-index: 1; 
@@ -11,7 +11,7 @@
     overflow-x: hidden; 
     padding-top: 20px;
     -webkit-filter: drop-shadow(0 1px 4px rgba(240, 234, 234, 0.2));
-    filter: drop-shadow(0 1px 4px #8b8b8a);
+    filter: drop-shadow(0 1px 4px #5c5c5c);
   }
  
 .sidesuchen {
