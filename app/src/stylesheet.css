@@ -1,13 +1,15 @@
   .side {
+    margin-top: 1em;
+    margin-left: 1em;
     float: left;
-    height: 25%; 
-    width: 350px; 
+    height: 22%; 
+    width: 280px; 
     position: fixed; 
     z-index: 1; 
     top: 0; 
     left: 0;
     background-color: rgb(248, 242, 242); 
-    border-radius: 0% 0% 10%;
+    border-radius: 10% 10% 10%;
     overflow-x: hidden; 
     padding-top: 20px;
     -webkit-filter: drop-shadow(0 1px 4px rgba(240, 234, 234, 0.2));
@@ -18,10 +20,15 @@
   margin-left: 10%;
 }
 
+  input {
+    width: 70%;
+
+  }
+
   .siderinhalt {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 23px;
+    font-size: 18px;
     color: #818181;
     display: block;
   }
@@ -45,6 +52,90 @@
   }
   
   li:hover {
-    background-color: #aaa9a9;
-    color: rgb(73, 72, 72);
+    background-color: #d8d7d7;
+    color: rgb(59, 59, 59);
   } 
+
+
+ progress::-moz-progress-bar {
+      background: rgb(197, 165, 161);
+  }
+
+  .img1 {
+    float: left;
+    display: block;
+    width: 35%;
+    border: 1px solid #888;
+    margin-bottom: 1.25em;
+    margin-left: 0;
+
+  }
+
+  .intro11 {
+    float: right;
+    display: block;
+    margin-top: 0;
+    width: 55%;
+    border: 1px solid rgb(248, 242, 242); 
+
+  }
+  
+  .like {
+    float: right;
+    display: block;
+    margin-right: 65%;
+    margin-top: 0.1%;
+    margin-bottom: 5%;
+    font-size: 14px;
+    border: 0.1ex solid rgb(167, 166, 166); 
+    border-radius: 10% 10% 10%;
+  }
+
+  .like:hover {
+    background-color: rgb(231, 231, 231);
+  }
+
+
+  .box{
+    margin-top: 5em;
+    margin-left: 19.5em;
+    float: right;
+    height: 2%; 
+    width: 38px; 
+    position: fixed; 
+    z-index: 1; 
+    background-color: rgb(248, 242, 242); 
+    border-radius: 10% 10% 10%;
+    overflow-x: hidden; 
+    padding-top: 20px;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(240, 234, 234, 0.2));
+    filter: drop-shadow(0 1px 4px #5c5c5c);
+}
+
+.markerbox {
+  overflow: hidden;
+  width:30px;
+  height: 26px;
+}
+
+
+.box2{
+  margin-top: 8em;
+  margin-left: 19.5em;
+  float: right;
+  height: 2%; 
+  width: 38px; 
+  position: fixed; 
+  z-index: 1; 
+  background-color: rgb(248, 242, 242); 
+  border-radius: 10% 10% 10%;
+  overflow-x: hidden; 
+  padding-top: 20px;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(240, 234, 234, 0.2));
+  filter: drop-shadow(0 1px 4px #5c5c5c);
+}
+
+.markerbox2 {
+width:30px;
+height: 26px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tabs</title>
+        <link rel="stylesheet" href="Ctabs.css">
+    </head>
+<body>
+      <!-- <div class="bar">
+        <button class="button1" onclick="openBu('Beschreibung')">Beschreibung</button>
+        <button class="button2" onclick="openBu('Hotel')">Hotel</button>
+        <button class="butten3" onclick="openBu('Produkten')">Produkten</button>
+      </div>
+      
+      <div id="Beschreibung" class="inhalt">
+        <h2>Beschreibung</h2>
+        <p>...</p>
+      </div>
+      
+      <div id="Hotel" class="inhalt" style="display:none">
+        <h2>Hotel</h2>
+        <p>...</p> 
+      </div>
+      
+      <div id="Produkten" class="inhalt" style="display:none">
+        <h2>Prodekten</h2>
+        <p>...</p>
+      </div>
+
+
+      <script>
+        function openBu(BuName) {
+          let i;
+          const x = document.getElementsByClassName("inhalt");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          document.getElementById(BuName).style.display = "block";  
+        }
+        </script> -->
+
+
+    <div class="bar">
+    <label class="button1" onclick="openBu('Beschreibung')">Beschreibung</label>
+    <label class="button2" onclick="openBu('Hotel')">Hotel</label>
+    <label class="butten3" onclick="openBu('Produkten')">Produkten</label>
+    </div>
+  
+    <div id="Beschreibung" class="inhalt">
+    <h2>Beschreibung</h2>
+    <p>...</p>
+    </div>
+  
+    <div id="Hotel" class="inhalt" style="display:none">
+    <h2>Hotel</h2>
+    <p>...</p> 
+    </div>
+  
+    <div id="Produkten" class="inhalt" style="display:none">
+    <h2>Prodekten</h2>
+    <p>...</p>
+    </div>
+
+
+  <script>
+    function openBu(BuName) {
+      let i;
+      const x = document.getElementsByClassName("inhalt");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(BuName).style.display = "block";  
+    }
+    </script>
+</body>
+</html>

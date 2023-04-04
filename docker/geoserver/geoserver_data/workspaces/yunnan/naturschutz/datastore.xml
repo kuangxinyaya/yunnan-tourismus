@@ -1,0 +1,26 @@
+<dataStore>
+  <id>DataStoreInfoImpl-48f000fd:187033b0eeb:-7ff0</id>
+  <name>naturschutz</name>
+  <type>Shapefile</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-20f5c3a2:186df72610f:-7ffc</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="charset">ISO-8859-1</entry>
+    <entry key="filetype">shapefile</entry>
+    <entry key="create spatial index">true</entry>
+    <entry key="memory mapped buffer">false</entry>
+    <entry key="timezone">GMT</entry>
+    <entry key="enable spatial index">true</entry>
+    <entry key="namespace">http://geoserver.org/yunnan</entry>
+    <entry key="cache and reuse memory maps">true</entry>
+    <entry key="skipScan">true</entry>
+    <entry key="url">file:data/Naturschutzprojekt/naturschutz.shp</entry>
+    <entry key="fstype">shape</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2023-03-21 13:48:10.398 UTC</dateCreated>
+  <dateModified>2023-03-29 11:12:10.375 UTC</dateModified>
+  <disableOnConnFailure>false</disableOnConnFailure>
+</dataStore>

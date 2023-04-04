@@ -1,0 +1,16 @@
+<layer>
+  <name>bear</name>
+  <id>LayerInfoImpl-4b167f71:1872c38c392:-7ffa</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e9d0036:186c1ac670f:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-4b167f71:1872c38c392:-7ffb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-29 14:49:38.926 UTC</dateCreated>
+</layer>

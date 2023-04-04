@@ -8,6 +8,8 @@ services:
       - ./geoserver/geoserver_data:/opt/geoserver_data/:Z
   database:
     image: postgis/postgis:13-3.2-alpine
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres

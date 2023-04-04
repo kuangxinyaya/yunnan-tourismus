@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "name": "dianmonkey",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:EPSG::4490"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "No.": 1,
+                "Latitude": 27.628571,
+                "Longitude": 99.368846,
+                "Elevation": 0.0,
+                "Timestamp": 1678787420869.0
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    99.368846,
+                    27.628571
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<layer>
+  <name>bearmarker</name>
+  <id>LayerInfoImpl--f9b6e2:1874b83887a:-7ff9</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e9d0036:186c1ac670f:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--f9b6e2:1874b83887a:-7ffa</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-04-04 13:37:51.137 UTC</dateCreated>
+</layer>

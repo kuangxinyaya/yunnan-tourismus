@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+
+<body>
+
+    <div>
+        <label id="haus" class="box"><img src="foto/bearicon.png" id="box1" class ="markerbox"></img></label>
+      </div>
+
+      <script>
+        let currentDroppable = null;
+    
+        box1.onmousedown = function(event) {
+    
+          let shiftX = event.clientX - box1.getBoundingClientRect().left;
+          let shiftY = event.clientY - box1.getBoundingClientRect().top;
+    
+          box1.style.position = 'absolute';
+          box1.style.zIndex = 1000;
+          document.body.append(box1);
+    
+          moveAt(event.pageX, event.pageY);
+    
+          function moveAt(pageX, pageY) {
+            box1.style.left = pageX - shiftX + 'px';
+            box1.style.top = pageY - shiftY + 'px';
+          }
+    
+          function onMouseMove(event) {
+            moveAt(event.pageX, event.pageY);
+    
+            box1.hidden = true;
+            let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+            box1.hidden = false;
+    
+            if (!elemBelow) return;
+    
+            let droppableBelow = elemBelow.closest('.box');
+            if (currentDroppable != droppableBelow) {
+              if (currentDroppable) { // null when we were not over a droppable before this event
+                leaveDroppable(currentDroppable);
+              }
+              currentDroppable = droppableBelow;
+              if (currentDroppable) { // null if we're not coming over a droppable now
+                // (maybe just left the droppable)
+                enterDroppable(currentDroppable);
+              }
+            }
+          }
+    
+          document.addEventListener('mousemove', onMouseMove);
+    
+          box1.onmouseup = function() {
+            document.removeEventListener('mousemove', onMouseMove);
+            box1.onmouseup = null;
+          };
+    
+        };
+    
+        function enterDroppable(elem) {
+          elem.style.background = 'rgb(245, 235, 235) ';
+          setTimeout(3000);
+        }
+    
+        function leaveDroppable(elem) {
+          elem.style.background = '';
+        }
+    
+        box1.ondragstart = function() {
+          return false;
+        };
+      </script>
+</body>
+</html>

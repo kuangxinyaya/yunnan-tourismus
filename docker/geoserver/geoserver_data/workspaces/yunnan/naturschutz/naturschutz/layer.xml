@@ -1,0 +1,16 @@
+<layer>
+  <name>naturschutz</name>
+  <id>LayerInfoImpl-48f000fd:187033b0eeb:-7fee</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4e9d0036:186c1ac670f:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-48f000fd:187033b0eeb:-7fef</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2023-03-21 13:48:18.521 UTC</dateCreated>
+</layer>

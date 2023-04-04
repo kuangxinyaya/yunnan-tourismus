@@ -1,0 +1,15 @@
+.bar{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(212, 171, 164);
+
+  }
+
+.inhalt {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+  }
