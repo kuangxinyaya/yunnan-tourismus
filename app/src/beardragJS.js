@@ -2,6 +2,7 @@
 
 import { Feature } from "ol";
 import { LineString, Point, Polygon } from 'ol/geom.js';
+import { transactWFS } from "./transaction";
 
 
 export function bear(map, dragvectorSouce) {
@@ -49,7 +50,7 @@ export function bear(map, dragvectorSouce) {
 
         document.addEventListener('mousemove', onMouseMove);
 
-        const onMouseUp = function (event) {
+        const onMouseUp = async function (event) {
             console.log("addEventListener('mouseup)")
 
             const coordinate = map.getEventCoordinate(event);
@@ -58,6 +59,8 @@ export function bear(map, dragvectorSouce) {
             });
 
             dragvectorSouce.addFeature(iconFeature);
+            await transactWFS('insert',iconFeature);
+            dragvectorSouce.refresh();
 
             document.removeEventListener('mousemove', onMouseMove);
             box1.removeEventListener('mouseup', onMouseUp);
@@ -83,47 +86,5 @@ export function bear(map, dragvectorSouce) {
         return false;
     };
 
-
-    //trash remove
-    // 1
-    // function trashremove() {
-    //     var trash = document.getElementById('box2');
-    //     trash.droppable({
-    //       drop: function(event, features) {
-    //         for (let i = 0; i < features.draggable.length; i++) {
-    //           features.draggable[i].remove();
-    //         }
-    //       }
-    //     });
-    //   };
-
-
-    // 2
-    // document.getElementById("box2").ondrop = function(evt){
-    //     const trash = evt.dataTransfer.getData();
-    //     if(trash) {
-    //         const target = iconFeature;
-    //         removeChild(target);
-    //     }
-    //     // document.ondragover = function(evt)
-    // }
-
-
-    // 3
-    // function allowDrop(ev){
-    //     ev.preventDefault();
-    // }
-    // function drag(ev){
-    //     ev.dataTransfer.setData("dragvectorLayer",ev.target.id);
-    // }
-    // function drop(ev){
-    //     ev.preventDefault();
-    //     const data = ev.dataTransfer.getData(dragvectorLayer);
-    //     const el = document.getElementById(data);
-    //     el.parentNode.removeChild(el);
-    // }
-
-
-    // })
 
 }
