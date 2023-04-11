@@ -1,29 +1,26 @@
 import { WFS } from "ol/format";
 import { GML } from "ol/format";
 
-
 const formatWFS = new WFS();
 
-const formatGML = new GML({
-  features: 'http://localhost:8081/geoserver/yunnan',
-  featureType: 'bearmarker',
-  srsName: 'EPSG:3857',
-  
-})
-
 const xs = new XMLSerializer();
+const gmlfeature = new GML({
+    featureNS: 'yunnan',
+    features: 'http://localhost:8081/geoserver/yunnan',
+    featureType: 'bearmarker',
+    srsName: 'EPSG:3857',
 
-
+})
 
 export const transactWFS = async function(mode, feature){
     let node;
 
     if (mode === 'update') {
-      node = formatWFS.writeTransaction(null, [feature], null, formatGML);
+      node = formatWFS.writeTransaction(null, [feature], null, gmlfeature);
     } else if (mode === 'insert') {
-      node = formatWFS.writeTransaction([feature], null, null, formatGML);
+      node = formatWFS.writeTransaction([feature], null, null, gmlfeature);
     } else if (mode === 'delete') {
-      node = formatWFS.writeTransaction(null, null, [feature], formatGML);
+      node = formatWFS.writeTransaction(null, null, [feature], gmlfeature);
     }
   
   const payload = xs.serializeToString(node);
