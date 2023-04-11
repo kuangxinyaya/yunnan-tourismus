@@ -1,141 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Popup</title>
-    <link rel="stylesheet" href="node_modules/ol/ol.css">
-    <link rel="stylesheet" href="stylesheet.css">
-    <style>
-      .map {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
 
-      .contai{  
-        position:relative;  
-        width: 100%;
-	      }  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popup</title>
+  <link rel="stylesheet" href="node_modules/ol/ol.css">
+  <link rel="stylesheet" href="stylesheet.css">
 
-      .ol-zoom {
-        margin-top: 1em;
-        margin-left: 16%;
-        }
+</head>
 
-      .ol-popup {
-            position: absolute;
-            background-color: rgb(253, 253, 252);
-            -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
-            filter: drop-shadow(0 1px 4px  #5c5c5c);
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #cccccc;
-            bottom: 12px;
-            left: -50px;
-            min-width: 200px;
-        }
+<body>
+  <div id="map" class="map"></div>
+  <div class="side">
+    <div class="sidesuchen">
+      <label for="site-search"></label>
+      <input type="search" id="site-search" name="q" value="">
+      <button id="button">Search</button>
+    </div>
 
-      .ol-popup:after, .ol-popup:before {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-      }
-      .ol-popup:after {
-        border-top-color:#acabab;
-        border-width: 10px;
-        left: 48px;
-        margin-left: -10px;
-      }
-      .ol-popup:before {
-        border-top-color: #cccccc;
-        border-width: 11px;
-        left: 48px;
-        margin-left: -11px;
-      }
-      .ol-popup-closer {
-        text-decoration: none;
-        position: absolute;
-        top: 2px;
-        right: 8px;
-      }
-
-      .ol-popup-closer:after {
-        content: "✖";
-        color:rgb(206, 179, 179);
-      }
-
-      .popuptext {
-        float: center;
-        display: block;
-        width: 100%;
-        border: 1px solid hsl(0, 20%, 99%);
-        margin-bottom: 1.25em;
-        margin-left: 0;
-      }
-
-    
-    </style>
-  </head>
-  <body>
-    <div id="map" class="map"></div>
-    <div class="side">
-        <div class="sidesuchen">
-            <label for="site-search"></label>
-            <input type="search" id="site-search" name="q" value="">
-            <button id="button">Search</button>
-        </div>
-      
-      <div class="siderinhalt">
-      <ul >
-          <li id="nav-item-all">All</li>
-          <li id="nav-item-nl">Naturlandschaft</li>
-          <li id="nav-item-kl">Kulturlandschaft</li>
-          <li id="nav-item-ns">Naturschutzprojekt</li>
+    <div class="siderinhalt">
+      <ul>
+        <li id="nav-item-all">All</li>
+        <li id="nav-item-nl">Naturlandschaft</li>
+        <li id="nav-item-kl">Kulturlandschaft</li>
+        <li id="nav-item-ns">Naturschutzprojekt</li>
       </ul>
     </div>
-     </div>
+  </div>
 
-      <div>
-        <label id="haus" class="box"><img src="assets/bearicon.png" id="box1" class ="markerbox"></img></label>
-      </div>
+  <div>
+    <label id="haus" class="box"><img src="assets/bearicon.png" id="box1" class="markerbox"></img></label>
+  </div>
 
-      <div>
-        <label id="haus2" class="box2"><img src="assets/bear3.png" id="box2" draggable="false" alt="trash" class="markerbox2"></img></label>
-      </div>
-    
-  
-    <div id="popup" class="ol-popup">
-      <div class="contai">
+  <div>
+    <label id="haus2" class="box2"><img src="assets/bear3.png" id="box2" draggable="false" alt="trash"
+        class="markerbox2"></img></label>
+  </div>
+
+  <!--ClusterPopup-->
+  <div id="popup" class="ol-popup">
+    <div class="contai">
       <div id="popuptext" class="popuptext"></div>
-    <div>
-        <img id="img1" class="img1" src="#"
-        sizes="(max-width: 50px) 50px, 50vw">   
-    </div>
-    <div>
-      <p id="intro11" class="intro11"></p>
-    </div>
-    <div>
-      <label id="like" class="like"></label>
-    </div>
+      <div>
+        <img id="img1" class="img1" src="#" sizes="(max-width: 50px) 50px, 50vw">
+      </div>
+      <div>
+        <p id="intro11" class="intro11"></p>
+      </div>
+      <div>
+        <label id="like" class="like"></label>
+      </div>
 
-    <!-- <div>
-      <label>sag etwas</label>
-      <input type="text" id="inputtext" value="">
-    </div> -->
-
-    <progress id="pro1" value="" max="100"></progress>
+      <progress id="pro1" value="0" max="100"></progress>
 
       <a href="#" id="popup-closer" class="ol-popup-closer"></a>
       <div id="popup-content"></div>
     </div>
-    </div>
-    <script type="module" src="main.js"></script>
+  </div>
 
-  </body>
+  <!--BearPopup-->
+  <div id="bearpopup" class="ol-popup">
+    <div class="contai2">
+      <div id="popuptext2" class="popuptext2"></div>
+      <label>schreib etwas</label>
+      <p>
+        <span type="text" id="bearText" class="bearpopup"></span>
+        <textarea id="innerTextOutput" rows="6" cols="30">…</textarea>
+      </p>
+
+      <p>
+        <button id="save">speichern</button>
+      </p>
+      <a href="#" id="popup-closer2" class="ol-popup-closer2"></a>
+      <div id="popup-content2"></div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+
+</body>
+
 </html>
