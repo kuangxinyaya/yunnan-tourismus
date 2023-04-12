@@ -18,7 +18,7 @@ export function setupPopup(map) {
   const source = document.getElementById("bearText");
   const innerTextOutput = document.getElementById("innerTextOutput");
 
-  innerTextOutput.value = source.innerText;
+  let savelistener;
 
 
   const popup = new Overlay({
@@ -113,17 +113,19 @@ export function setupPopup(map) {
         popup.setPosition(coordinates);
 
       } else {
+        if(savelistener){
+          save.removeEventListener('click',savelistener);
+        }
         const feature = features[0];
         const textarea = document.getElementById('innerTextOutput');
-        // if (){
-        textarea.value = feature.get('content');
-        save.addEventListener('click', async function() {
 
+        textarea.value = feature.get('content');
+
+        savelistener = async function() {
           feature.set('content',textarea.value);
           await transactWFS('update', feature);
-
-        })
-      // }
+        };
+        save.addEventListener('click',savelistener);
 
 
         const bearCoordinates = feature.getGeometry().getCoordinates();
